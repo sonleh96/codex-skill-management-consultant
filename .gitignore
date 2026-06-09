@@ -11,3 +11,5 @@ desktop.ini
 *.bak
 *.swp
 
+# Local agent planning documents
+docs/superpowers/plans/
