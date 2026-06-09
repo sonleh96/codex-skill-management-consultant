@@ -25,6 +25,37 @@ Use this order:
 
 Prefer narrow references over broad ones. Do not load many reference files just because they might be useful.
 
+## Source Discipline
+
+Separate evergreen consulting methods from current facts.
+
+- Treat frameworks, issue-tree logic, communication patterns, and analytical methods as evergreen unless the user asks for the latest version of a standard.
+- Treat market sizes, company performance, regulation, pricing, technology trends, benchmarks, and current events as date-sensitive.
+- Use web search with citations for date-sensitive claims when current accuracy matters.
+- Label unsupported estimates as assumptions or hypotheses.
+- When giving numbers, state units, time period, geography, and source basis.
+- If evidence is incomplete, say what would need to be validated before acting.
+
+## Confidentiality and Client Data
+
+Default to protecting client-sensitive material.
+
+- Do not send confidential client data, private financials, personal data, contracts, strategy documents, or non-public diligence material to web search or external tools.
+- Redact or generalize sensitive facts before using external research.
+- Ask before using web search when the prompt appears to include private client context.
+- Do not invent confidential benchmarks, client examples, or firm-proprietary methods.
+- When public examples are useful, use clearly public companies, public filings, public reports, or anonymized examples.
+
+## Output Standards
+
+For recommendations, distinguish:
+
+- **Evidence-backed:** Supported by cited sources, provided data, or loaded references.
+- **Assumption:** A necessary input that has not been validated.
+- **Hypothesis:** A testable explanation or recommendation that needs further analysis.
+
+End substantial consulting answers with the next validation steps unless the user only asked for a quick draft or brainstorm.
+
 ## Workflow
 
 Adapt the depth to the task. A quick case-practice answer does not need a full engagement plan; a strategy or diligence problem usually does.
