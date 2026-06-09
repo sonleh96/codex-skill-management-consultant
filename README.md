@@ -20,9 +20,10 @@ The skill includes:
 
 - Codex installed and configured on the target machine.
 - Git, if installing or updating from this repository.
-- A writable Codex skills directory:
-  - Windows: `%USERPROFILE%\.codex\skills`
-  - macOS/Linux: `~/.codex/skills`
+- A writable Codex skills directory.
+  - Current Codex documentation commonly uses `~/.agents/skills` for user-level skills.
+  - This local Codex desktop install has also discovered skills from `~/.codex/skills`.
+  - If both exist, prefer the path used by your active Codex installation.
 
 Restart Codex after installing or updating so the skill list is rediscovered.
 
@@ -30,46 +31,32 @@ Restart Codex after installing or updating so the skill list is rediscovered.
 
 ### Windows PowerShell
 
-Clone this repository:
+Clone this repository and install the skill:
 
 ```powershell
-git clone https://github.com/<your-org-or-user>/codex-skill-management-consultant.git
-```
-
-Create the Codex skills directory if needed:
-
-```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills" | Out-Null
-```
-
-Install the skill:
-
-```powershell
+git clone https://github.com/sonleh96/codex-skill-management-consultant.git
+$skillsDir = "$env:USERPROFILE\.agents\skills"
+New-Item -ItemType Directory -Force $skillsDir | Out-Null
 Copy-Item -Path ".\codex-skill-management-consultant\management-consultant" `
-  -Destination "$env:USERPROFILE\.codex\skills\" `
+  -Destination $skillsDir `
   -Recurse `
   -Force
 ```
 
+If your Codex desktop install uses `.codex\skills`, set `$skillsDir = "$env:USERPROFILE\.codex\skills"` instead.
+
 ### macOS/Linux
 
-Clone this repository:
+Clone this repository and install the skill:
 
 ```bash
-git clone https://github.com/<your-org-or-user>/codex-skill-management-consultant.git
+git clone https://github.com/sonleh96/codex-skill-management-consultant.git
+skills_dir="$HOME/.agents/skills"
+mkdir -p "$skills_dir"
+cp -R codex-skill-management-consultant/management-consultant "$skills_dir/"
 ```
 
-Create the Codex skills directory if needed:
-
-```bash
-mkdir -p "$HOME/.codex/skills"
-```
-
-Install the skill:
-
-```bash
-cp -R codex-skill-management-consultant/management-consultant "$HOME/.codex/skills/"
-```
+If your Codex install uses `.codex/skills`, set `skills_dir="$HOME/.codex/skills"` instead.
 
 ## Updating
 
@@ -79,11 +66,14 @@ From the cloned repository:
 
 ```powershell
 git pull
+$skillsDir = "$env:USERPROFILE\.agents\skills"
 Copy-Item -Path ".\management-consultant" `
-  -Destination "$env:USERPROFILE\.codex\skills\" `
+  -Destination $skillsDir `
   -Recurse `
   -Force
 ```
+
+If your Codex desktop install uses `.codex\skills`, set `$skillsDir = "$env:USERPROFILE\.codex\skills"` instead.
 
 Restart Codex after the copy completes.
 
@@ -93,9 +83,12 @@ From the cloned repository:
 
 ```bash
 git pull
-rm -rf "$HOME/.codex/skills/management-consultant"
-cp -R management-consultant "$HOME/.codex/skills/"
+skills_dir="$HOME/.agents/skills"
+rm -rf "$skills_dir/management-consultant"
+cp -R management-consultant "$skills_dir/"
 ```
+
+If your Codex install uses `.codex/skills`, set `skills_dir="$HOME/.codex/skills"` instead.
 
 Restart Codex after the copy completes.
 
