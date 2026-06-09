@@ -13,6 +13,7 @@ Use this file before loading detailed reference files. Pick the 1-3 most relevan
 
 | Reference | Use When | Keywords |
 |-----------|----------|----------|
+| `case-study-index.md` | Finding worked examples, case-study precedents, and consulting deliverable artifacts. | case study, worked example, precedent, template |
 | `case-interview.md` | Preparing for or answering case interviews. | case interview, practice, fit |
 | `case-pattern-library.md` | Matching a case to recurring business patterns. | case pattern, archetype |
 | `case-types.md` | Identifying profitability, growth, market entry, M&A, and operations case types. | case type, profitability, market entry, M&A |
