@@ -4,7 +4,7 @@ Codex adaptation of the management-consultant skill from
 [DogInfantry/claude-skill-management-consultant-B1](https://github.com/DogInfantry/claude-skill-management-consultant-B1).
 
 This repository packages the skill for repeatable installation into Codex across machines.
-The installable skill folder is `management-consultant/`.
+The installable skill folder is `management-consultant/`. Worked case studies and heavy deliverable artifacts live at the repository root for repo-only retrieval.
 
 ## What This Skill Does
 
@@ -14,7 +14,16 @@ The skill includes:
 
 - `management-consultant/SKILL.md`: Codex skill entrypoint and workflow.
 - `management-consultant/references/`: consulting reference library adapted from the upstream Claude skill.
+- `management-consultant/references/index.md`: reference discovery map for progressive loading.
+- `management-consultant/references/case-study-index.md`: repo-only case-study retrieval map.
 - `management-consultant/agents/openai.yaml`: Codex UI metadata and default prompt.
+
+The repository also includes:
+
+- `CASE-STUDIES.md`: upstream worked-case guide.
+- `case-studies/`: upstream case-study artifacts, including Markdown, PDF, XLSX, and HTML deliverables.
+
+Case studies are examples and precedent artifacts. They are not loaded automatically by the skill; use `management-consultant/references/case-study-index.md` to decide which case-study artifact to open.
 
 ## Requirements
 
@@ -113,6 +122,9 @@ codex-skill-management-consultant/
 ├── README.md
 ├── LICENSE
 ├── NOTICE
+├── CASE-STUDIES.md
+├── case-studies/
+│   └── ...
 └── management-consultant/
     ├── SKILL.md
     ├── agents/
