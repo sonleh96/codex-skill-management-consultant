@@ -1,0 +1,4 @@
+interface:
+  display_name: "Management Consultant"
+  short_description: "Consulting frameworks and case prep"
+  default_prompt: "Use $management-consultant to structure a profitability case and recommend next steps."

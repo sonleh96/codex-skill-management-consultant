@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local editor state
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
